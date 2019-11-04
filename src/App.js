@@ -21,11 +21,9 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      loadTodos()
+    loadTodos()
       .then(({ data }) => this.setState({ todos: data }))
       .catch(() => this.setState({ error: true }))
-    }, 5000)
   }
 
   handleNewTodoChange(evt) {
