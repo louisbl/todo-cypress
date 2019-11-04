@@ -10,12 +10,12 @@ server.use(jsonServer.bodyParser)
 
 server.delete('/api/todos/all', (req, res) => {
   router.db.setState({todos: []})
-    .then(() => res.sendStatus(200))
+  res.sendStatus(200)
 })
 
 server.post('/api/todos/bulkload', ({body: { todos }}, res) => {
   router.db.setState({ todos })
-    .then(() => res.sendStatus(200))
+  res.sendStatus(200)
 })
 
 
