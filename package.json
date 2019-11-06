@@ -34,7 +34,11 @@
     ]
   },
   "proxy": "http://localhost:4000",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
   "devDependencies": {
-    "cypress": "^3.6.0"
+    "cypress": "^3.6.0",
+    "cypress-cucumber-preprocessor": "^1.16.2"
   }
 }
